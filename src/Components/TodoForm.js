@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
 const TodoForm = (props) => {
-  console.log(props);
   const [input, setInput] = useState(props.edit ? props.edit.text : "");
   const inputRef = useRef(null);
   useEffect(() => {
