@@ -25,18 +25,15 @@ const TodoApp = () => {
     // clone: do not mutate
     const selectedTodo = { ...todos[index] };
     selectedTodo.isCompleted = !selectedTodo.isCompleted;
-    /* console.log(selectedTodo); */
     // clone : todos
     const updatedTodos = [...todos];
     updatedTodos[index] = selectedTodo;
-    /* console.log(updatedTodos[index]); */
     setTodos(updatedTodos);
   };
 
   const deleteHandler = (id) => {
     const index = todos.filter((todo) => todo.id !== id);
     setTodos(index);
-    /*  console.log(index); */
   };
 
   const updateTodo = (id, newValue) => {
@@ -44,11 +41,9 @@ const TodoApp = () => {
     // clone: do not mutate
     const selectedTodo = { ...todos[index] };
     selectedTodo.text = newValue;
-    console.log(selectedTodo);
     // clone : todos
     const updatedTodos = [...todos];
     updatedTodos[index] = selectedTodo;
-    console.log(updatedTodos[index]);
     setTodos(updatedTodos);
   };
 
